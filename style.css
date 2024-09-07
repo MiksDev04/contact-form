@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   font-family: Karla;
+}
+
+*, *::before, *::after{
+   box-sizing: border-box;
+}
+
+:root{
+    /* ## Colors */
+
+    /* ### Primary */
+    
+    --Green-200-lighter: #dff1e7;
+    --Green-600-medium: #0c7d69;
+    --Red: #d73c3c;
+    
+    /* ### Neutral */
+    
+    --White: #ffffff;
+    --Grey-500-medium: #87a3a6;
+    --Grey-900-darker: #2b4246;
+
+    /* font size */
+    --fs-labels: 16px;
+
+    /* font weight */
+    --fw400: 400; --fw700: 700;
+}
+
+body{
+   background-color: var(--Green-200-lighter);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100dvh;
+}
+
+form{
+    width: clamp(320px, 90%, 700px);
+    display: grid;
+    padding: 2rem;
+    gap: 1.2rem;
+    background-color: var(--White);
+    border-radius: 1rem;
+}
+/* form > section{
+    outline: 1px solid lime;
+} */
+form h1{
+    font-size: 1.9rem;
+    font-weight: var(--fw700);
+    color: var(--Grey-900-darker);
+}
+form label{
+    font-size: var(--fs-labels);
+    color: var(--Grey-900-darker);
+    font-weight: var(--fw400);
+}
+
+/* span / error message */
+form span {
+    display: none;
+    color: red;
+    font-size: var(--fs-labels);
+    font-weight: var(--fw400);
+}
+form section:not(.consent-input){
+    display: grid;
+    gap: 1rem;
+}
+form .label:after{
+    content: ' *';
+    color: var(--Green-600-medium);
+}
+.name-input-section, .query-type-input-wrapper{
+    gap: .8rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* input name section */
+.name-input-section div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* all inputs and section with same sizes */
+input[type="email"], input[type="text"], .query-type-input-wrapper > label {
+    font-size: var(--fs-labels);
+    color: var(--Grey-900-darker);
+    font-weight: var(--fw400);
+    padding: .8rem;
+    border: 1px solid var(--Grey-500-medium);
+    border-radius: .5rem;
+    accent-color: var(--Green-600-medium);
+}
+input[type="email"]:hover,
+input[type="text"]:hover,
+.message-input textarea:hover,
+.query-type-input-wrapper > label:hover {
+    outline: 1px solid var(--Green-600-medium);
+
+}
+
+/* query type section */
+.query-type-input-wrapper > label{
+    display: flex;
+    gap: .5rem ;
+    padding: .8rem 1rem;
+   
+    input{
+        width: 1rem;
+    }
+}
+.query-active{
+    background-color:  #c3ece4;
+    outline: 1px solid var(--Green-600-medium);
+}
+
+/* hover effect */
+input[type="email"]:focus-within, input[type="text"]:focus-within, .message-input textarea:focus-within{
+    outline: 1px solid var(--Green-600-medium);
+}
+
+/* message section */
+.message-input textarea{
+    font-size: var(--fs-labels);
+    color: var(--Grey-900-darker);
+    font-weight: var(--fw400);
+    padding: .8rem;
+    border: 1px solid var(--Grey-500-medium);
+    border-radius: .5rem;
+    min-height: 6rem;
+    resize: none;
+}
+
+/* consent input */
+.consent-input div{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0rem;
+    input{
+        width: 1rem;
+        accent-color: var(--Green-600-medium);
+    }
+}
+.consent-input span{
+    width: 100%;
+}
+
+/* submit button */
+.submit-btn{
+    padding: 1rem;
+    background-color: var(--Green-600-medium);
+    border: none;
+    border-radius: .5rem;
+    color: var(--Green-200-lighter);
+}
+.submit-btn:hover{
+    background-color: #0e493e;
+}
+dialog{
+    gap: .7rem;
+    top: 1rem;
+    margin: auto;
+    border: none;
+    padding: 1.5rem 1rem;
+    border-radius: .5rem;
+    background-color: var(--Grey-900-darker);
+    div{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+    h3{
+        
+        color: var(--White);
+        font-size: var(--fs-labels);
+        font-weight: var(--fw700);
+    }
+    p{
+        color: var(--Grey-500-medium);
+        font-size: var(--fs-labels);
+        font-weight: var(--fw400);
+    }
+}
+
+/* responsive */
+@media (max-width: 600px) {
+    form{
+        margin: 2rem 0;
+    }
+    .name-input-section, .query-type-input-wrapper{
+        gap: .8rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .message-input textarea{
+        min-height: 13rem;
+    }
+    
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Contact form</title>
+
+</head>
+
+<body>
+  <form action="" method="dialog">
+    <h1>Contact Us</h1>
+
+    <section class="name-input-section">
+      <!-- first name -->
+      <div class="first-name-input">
+        <label for="first-name" class="label">First Name</label>
+        <input type="text" id="first-name">
+        <span class="error-message">This filed is required</span>
+      </div>
+      <!-- last name -->
+      <div class="last-name-input">
+        <label for="last-name" class="label">Last Name</label>
+        <input type="text" id="last-name">
+        <span class="error-message">This filed is required</span>
+      </div>
+    </section>
+    <!-- email address -->
+    <section class="email-address-input">
+      <label for="email" class="label">Email Address</label>
+      <input type="email" id="email">
+      <span class="error-message">Please enter a valid email address</span>
+    </section>
+    <!-- query type -->
+    <section class="query-type-input">
+      <label class="label">Query Type</label>
+      <div class="query-type-input-wrapper">
+        <label for="general-enquiry">
+          <input type="radio" name="query-type" id="general-enquiry">
+          General Enquiry
+        </label>
+        <label for="support-request">
+          <input type="radio" name="query-type" id="support-request">
+          Support Request
+        </label>
+      </div>
+      <span class="error-message">Please select a query type</span>
+    </section>
+    <!-- message input -->
+    <section class="message-input">
+      <label for="message" class="label">Message</label>
+      <textarea id="message"></textarea>
+      <span class="error-message">This filed isrequired</span>
+    </section>
+    <!-- consent validation -->
+    <section class="consent-input">
+      <div>
+        <input type="checkbox" id="consent">
+      <label for="consent" class="label">I consent to being contacted by the team</label>
+      </div>
+      <span class="error-message">To submit this form, please consent to being contacted</span>
+    </section>
+
+    <input type="submit" value="Submit" class="submit-btn">
+  </form>
+  <dialog>
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21"><path fill="#fff" d="M14.28 7.72a.748.748 0 0 1 0 1.06l-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.75.75 0 0 1 1.06 0Zm5.47 2.78A9.75 9.75 0 1 1 10 .75a9.76 9.76 0 0 1 9.75 9.75Zm-1.5 0A8.25 8.25 0 1 0 10 18.75a8.26 8.26 0 0 0 8.25-8.25Z"/></svg>
+      <h3>Message Sent!</h3>
+    </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </dialog>
+</body>
+
+</html>
