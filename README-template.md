@@ -43,7 +43,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Contact form](https://miksdev04.github.io/contact-form/)
 
 ## My process
 
@@ -66,10 +66,8 @@ I want to continue creating more contact forms in the future.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
+- Website - [MiksDev](https://miksdev04.github.io/web-dev-portfolio/)
+- Frontend Mentor - [@MiksDev](https://www.frontendmentor.io/profile/MiksDev)
 
 
 [./screenshot/desktop]: ./screenshot/desktop.png
